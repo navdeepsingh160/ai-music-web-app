@@ -16,7 +16,7 @@ function preload(){
 }
 
 function draw(){
-    image(img, 0, 0, 640, 420);
+    image(video, 0, 0, 640, 420);
     
           
 
