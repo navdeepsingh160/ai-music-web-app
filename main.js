@@ -4,7 +4,20 @@ function setup(){
     video = createCapture(VIDEO);
     video.hide();
 
+    poseNET = ml5.poseNet(video, modleLoaded);
+
+
 }
+
+function modleLoaded(){
+    console.log("PoseNet Is Initialized");
+}
+function gotPoses (results) {
+    if(results.length > 0)
+    {
+    console.log(results);
+    }
+    }
 song1 = "";
 song2 = "";
 
@@ -21,5 +34,11 @@ function draw(){
           
 
 }
+
+rightWristX = 0;
+rightWristY = 0;
+
+lefttWristX = 0;
+leftWristY = 0;
 
 
